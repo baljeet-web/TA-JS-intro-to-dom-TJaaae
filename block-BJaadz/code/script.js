@@ -1,13 +1,18 @@
 // Select the h1 element and store it in a variable named heading.
-
+var heading = document.querySelector(`h1`);
+console.log(heading);
 // Check the typeof heading and log it.
+console.log(typeof heading);
 
 // Change the color of heading to black.
+heading.style.color = `black`;
 
 // Select all the hr elements and store it in a variable named allHrs using querySelectorAll
+var allHrs = document.querySelectorAll(`hr`);
 
 /* 
 Convert the NodeList returned by querySelectorAll to Array using Array.from() or spread operator and store it in allHrsArray
+
 
 Array.from converts an array kind of data into array so we can use methods like map, reduce
 
@@ -15,22 +20,36 @@ HINT:
 let allHrsArray = Array.from(allHrs)
 */
 
+let allHrsArray = Array.from(allHrs)
+
 // Set the border of the all the hr elements to "1px solid tomato"
+
+allHrsArray.map(item=> item.style.border=`1px solid tomato`);
 
 // Change the background of all the hr to "antiquewhite" using for of loop.
 
+allHrsArray.forEach(item=>item.style.backgroundColor=`antiquewhite`)
+let loopforStyling = allHrsArray.forEach(item=>item.style)
+
 // Change the 'border-radius' of all the hr to "5px" using array.
 
+
 // Change the alignment of the heading(h1) to center.
+heading.style.textAlign=`center`;
 
 // Change the font size of the heading to 3rem.
 
+heading.style.fontSize=`3rem`
+
 // Change the border of hr with class 'image' to `2px solid purple`.
 
+document.body.querySelector(`.image`).style.border=`2px solid purple`
+
 // Hide the box number 17 (last box).
-
+let seventeen = document.querySelector(`.seventeen`)
+seventeen.style.display= `none`
 // Change the border of all the hr element from solid to dashed type
-
+loopforStyling.border= `1px dashed tomato`
 // Create a pragraph element and store it in variable named 'para' using `createElement`
 
 // Change the inner text of para to "querySelector returns an element you can maupulate but querySelectorAll returns the collection of elements in array kind of structure."
@@ -83,7 +102,7 @@ Do the following after selecting box 16 and storing in variable named box16
 
 // textContent of the button should be 'Click Me'
 
-// Change the background of the btn to 'oldlace'
+// Change the background ofallHrs the btn to 'oldlace'
 
 // Change the font size of the btn to 1rem
 
